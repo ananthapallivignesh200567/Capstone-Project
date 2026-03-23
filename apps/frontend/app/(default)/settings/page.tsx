@@ -66,7 +66,7 @@ const PROVIDERS: LLMProvider[] = [
 
 const SEGMENTED_BUTTON_BASE =
   'border border-black font-mono transition-all duration-150 ease-out shadow-[2px_2px_0px_0px_#000000] hover:translate-y-[1px] hover:translate-x-[1px] hover:shadow-none disabled:cursor-not-allowed disabled:opacity-50';
-const SEGMENTED_BUTTON_ACTIVE = 'bg-blue-700 text-white border-black hover:bg-blue-800';
+const SEGMENTED_BUTTON_ACTIVE = 'bg-[#0e7490] text-white border-black hover:bg-[#0b5e6e]';
 const SEGMENTED_BUTTON_INACTIVE = 'bg-white text-black hover:bg-[#E5E5E0]';
 
 const unwrapCodeBlock = (value?: string | null): string | null => {
@@ -499,13 +499,18 @@ export default function SettingsPage() {
 
   const requiresApiKey = providerInfo.requiresKey ?? true;
 
+  const gridSvg = `<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'>
+  <path d='M0 0H40' stroke='#0e7490' stroke-opacity='0.15' stroke-width='1' fill='none'/>
+  <path d='M0 0V40' stroke='#0e7490' stroke-opacity='0.15' stroke-width='1' fill='none'/>
+  </svg>`;
+  const gridBackground = `url("data:image/svg+xml,${encodeURIComponent(gridSvg)}")`;
+
   return (
     <div
       className="flex flex-col items-center justify-start p-6 md:p-12 min-h-screen overflow-y-auto"
       style={{
-        backgroundImage:
-          'linear-gradient(rgba(29, 78, 216, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(29, 78, 216, 0.05) 1px, transparent 1px)',
-        backgroundSize: '40px 40px',
+        backgroundImage: gridBackground,
+        backgroundRepeat: 'repeat',
       }}
     >
       <div className="w-full max-w-4xl border border-black bg-[#F0F0E8] shadow-[8px_8px_0px_0px_rgba(0,0,0,0.1)]">

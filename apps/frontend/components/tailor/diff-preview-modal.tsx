@@ -114,7 +114,7 @@ export function DiffPreviewModal({
         {/* Summary cards */}
         <div className="border-2 border-black bg-white p-4 mt-4">
           <div className="flex items-center gap-2 mb-3">
-            <div className="w-3 h-3 bg-[#1D4ED8]"></div>
+            <div className="w-3 h-3 bg-[#0e7490]"></div>
             <h3 className="font-mono text-sm font-bold uppercase tracking-wider">
               {t('tailor.diffModal.summary')}
             </h3>
@@ -300,7 +300,7 @@ function StatCard({ label, value, variant }: StatCardProps) {
     success: 'border-[#15803D] bg-[#F0FDF4] text-[#15803D]',
     warning: 'border-[#F97316] bg-[#FFF7ED] text-[#F97316]',
     danger: 'border-[#DC2626] bg-[#FEF2F2] text-[#DC2626]',
-    info: 'border-[#1D4ED8] bg-[#EFF6FF] text-[#1D4ED8]',
+    info: 'border-[#0e7490] bg-[#f0fdfa] text-[#0e7490]',
   };
 
   return (
@@ -349,7 +349,7 @@ function ChangeItem({ change }: ChangeItemProps) {
   const typeColors = {
     added: 'border-l-4 border-[#15803D] bg-[#F0FDF4]',
     removed: 'border-l-4 border-[#DC2626] bg-[#FEF2F2]',
-    modified: 'border-l-4 border-[#1D4ED8] bg-[#EFF6FF]',
+    modified: 'border-l-4 border-[#0e7490] bg-[#f0fdfa]',
   };
 
   const typeLabels = {

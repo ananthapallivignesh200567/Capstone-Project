@@ -72,14 +72,14 @@ export function PageContainer({
               left: marginLeftPx,
               width: contentWidth,
               height: maxContentHeight,
-              border: '1px dashed rgba(29, 78, 216, 0.5)',
+              border: '1px dashed rgba(14, 116, 144, 0.5)',
             }}
           >
             {/* Corner markers */}
-            <div className="absolute -top-1 -left-1 w-2 h-2 border-t border-l border-blue-500" />
-            <div className="absolute -top-1 -right-1 w-2 h-2 border-t border-r border-blue-500" />
-            <div className="absolute -bottom-1 -left-1 w-2 h-2 border-b border-l border-blue-500" />
-            <div className="absolute -bottom-1 -right-1 w-2 h-2 border-b border-r border-blue-500" />
+            <div className="absolute -top-1 -left-1 w-2 h-2 border-t border-l border-[#0e7490]" />
+            <div className="absolute -top-1 -right-1 w-2 h-2 border-t border-r border-[#0e7490]" />
+            <div className="absolute -bottom-1 -left-1 w-2 h-2 border-b border-l border-[#0e7490]" />
+            <div className="absolute -bottom-1 -right-1 w-2 h-2 border-b border-r border-[#0e7490]" />
           </div>
         )}
 

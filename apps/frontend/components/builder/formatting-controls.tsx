@@ -153,7 +153,7 @@ export const FormattingControls: React.FC<FormattingControlsProps> = ({ settings
         className="w-full flex items-center justify-between p-3 hover:bg-gray-50 transition-colors"
       >
         <div className="flex items-center gap-2">
-          <div className="w-2 h-2 bg-blue-700"></div>
+          <div className="w-2 h-2 bg-[#0e7490]"></div>
           <span className="font-mono text-xs font-bold uppercase tracking-wider">
             {t('builder.formatting.panelTitle')}
           </span>
@@ -180,7 +180,7 @@ export const FormattingControls: React.FC<FormattingControlsProps> = ({ settings
                   onClick={() => handleTemplateChange(template.id)}
                   className={`group flex flex-col items-center p-2 border-2 transition-all ${
                     settings.template === template.id
-                      ? 'border-blue-700 bg-blue-50 shadow-[2px_2px_0px_0px_#1D4ED8]'
+                      ? 'border-[#0e7490] bg-[#f0fdfa] shadow-[2px_2px_0px_0px_#0e7490]'
                       : 'border-black bg-white hover:bg-gray-50 hover:shadow-[1px_1px_0px_0px_#000]'
                   }`}
                   title={templateLabels[template.id].description}
@@ -193,7 +193,7 @@ export const FormattingControls: React.FC<FormattingControlsProps> = ({ settings
                   </div>
                   <span
                     className={`font-mono text-[9px] uppercase tracking-wider font-bold ${
-                      settings.template === template.id ? 'text-blue-700' : 'text-gray-700'
+                      settings.template === template.id ? 'text-[#0e7490]' : 'text-gray-700'
                     }`}
                   >
                     {templateLabels[template.id].name}
@@ -216,7 +216,7 @@ export const FormattingControls: React.FC<FormattingControlsProps> = ({ settings
                     onClick={() => handleAccentColorChange(color)}
                     className={`flex items-center gap-2 px-3 py-2 border-2 font-mono text-xs transition-all ${
                       settings.accentColor === color
-                        ? 'border-blue-700 bg-blue-50 shadow-[2px_2px_0px_0px_#1D4ED8]'
+                        ? 'border-[#0e7490] bg-[#f0fdfa] shadow-[2px_2px_0px_0px_#0e7490]'
                         : 'border-black bg-white hover:bg-gray-50'
                     }`}
                     title={t(`builder.formatting.accentColors.${color}`)}
@@ -244,7 +244,7 @@ export const FormattingControls: React.FC<FormattingControlsProps> = ({ settings
                   onClick={() => handlePageSizeChange(size)}
                   className={`flex-1 px-3 py-2 border-2 font-mono text-xs transition-all ${
                     settings.pageSize === size
-                      ? 'border-blue-700 bg-blue-50 text-blue-700 shadow-[2px_2px_0px_0px_#1D4ED8]'
+                      ? 'border-[#0e7490] bg-[#f0fdfa] text-[#0e7490] shadow-[2px_2px_0px_0px_#0e7490]'
                       : 'border-black bg-white text-gray-700 hover:bg-gray-50'
                   }`}
                   title={PAGE_SIZE_INFO[size].dimensions}
@@ -339,7 +339,7 @@ export const FormattingControls: React.FC<FormattingControlsProps> = ({ settings
                       onClick={() => handleHeaderFontChange(font)}
                       className={`px-2 py-1 font-mono text-xs border transition-all ${
                         settings.fontSize.headerFont === font
-                          ? 'bg-blue-700 text-white border-blue-700 shadow-[1px_1px_0px_0px_#000]'
+                          ? 'bg-[#0e7490] text-white border-[#0e7490] shadow-[1px_1px_0px_0px_#000]'
                           : 'bg-white text-gray-700 border-gray-300 hover:border-black'
                       }`}
                       style={{
@@ -368,7 +368,7 @@ export const FormattingControls: React.FC<FormattingControlsProps> = ({ settings
                       onClick={() => handleBodyFontChange(font)}
                       className={`px-2 py-1 font-mono text-xs border transition-all ${
                         settings.fontSize.bodyFont === font
-                          ? 'bg-blue-700 text-white border-blue-700 shadow-[1px_1px_0px_0px_#000]'
+                          ? 'bg-[#0e7490] text-white border-[#0e7490] shadow-[1px_1px_0px_0px_#000]'
                           : 'bg-white text-gray-700 border-gray-300 hover:border-black'
                       }`}
                       style={{
@@ -400,13 +400,13 @@ export const FormattingControls: React.FC<FormattingControlsProps> = ({ settings
                   onClick={handleCompactModeToggle}
                   className={`relative w-10 h-5 border-2 transition-all ${
                     settings.compactMode
-                      ? 'bg-blue-700 border-blue-700'
+                      ? 'bg-[#0e7490] border-[#0e7490]'
                       : 'bg-white border-gray-400'
                   }`}
                 >
                   <span
                     className={`absolute top-0.5 w-3.5 h-3.5 bg-white border transition-all ${
-                      settings.compactMode ? 'left-5 border-blue-700' : 'left-0.5 border-gray-400'
+                      settings.compactMode ? 'left-5 border-[#0e7490]' : 'left-0.5 border-gray-400'
                     }`}
                   />
                 </button>
@@ -420,15 +420,15 @@ export const FormattingControls: React.FC<FormattingControlsProps> = ({ settings
                 <button
                   onClick={handleShowContactIconsToggle}
                   className={`relative w-10 h-5 border-2 transition-all ${
-                    settings.showContactIcons
-                      ? 'bg-blue-700 border-blue-700'
+                      settings.showContactIcons
+                      ? 'bg-[#0e7490] border-[#0e7490]'
                       : 'bg-white border-gray-400'
                   }`}
                 >
                   <span
                     className={`absolute top-0.5 w-3.5 h-3.5 bg-white border transition-all ${
                       settings.showContactIcons
-                        ? 'left-5 border-blue-700'
+                        ? 'left-5 border-[#0e7490]'
                         : 'left-0.5 border-gray-400'
                     }`}
                   />
@@ -523,12 +523,12 @@ const MarginSlider: React.FC<MarginSliderProps> = ({ label, value, onChange }) =
                    [&::-webkit-slider-thumb]:appearance-none
                    [&::-webkit-slider-thumb]:w-3
                    [&::-webkit-slider-thumb]:h-3
-                   [&::-webkit-slider-thumb]:bg-blue-700
+                   [&::-webkit-slider-thumb]:bg-[#0e7490]
                    [&::-webkit-slider-thumb]:border-none
                    [&::-webkit-slider-thumb]:cursor-pointer
                    [&::-moz-range-thumb]:w-3
                    [&::-moz-range-thumb]:h-3
-                   [&::-moz-range-thumb]:bg-blue-700
+                   [&::-moz-range-thumb]:bg-[#0e7490]
                    [&::-moz-range-thumb]:border-none
                    [&::-moz-range-thumb]:cursor-pointer"
       />
@@ -561,7 +561,7 @@ const SpacingSelector: React.FC<SpacingSelectorProps> = ({ label, value, onChang
             onClick={() => onChange(level)}
             className={`w-6 h-6 font-mono text-xs border transition-all ${
               value === level
-                ? 'bg-blue-700 text-white border-blue-700 shadow-[1px_1px_0px_0px_#000]'
+                ? 'bg-[#0e7490] text-white border-[#0e7490] shadow-[1px_1px_0px_0px_#000]'
                 : 'bg-white text-gray-700 border-gray-300 hover:border-black'
             }`}
           >

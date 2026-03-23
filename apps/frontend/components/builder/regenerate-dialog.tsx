@@ -244,13 +244,13 @@ const ItemRow: React.FC<ItemRowProps> = ({ item, isSelected, onToggle }) => {
       type="button"
       onClick={onToggle}
       className={`w-full p-4 flex items-center gap-4 text-left transition-colors ${
-        isSelected ? 'bg-blue-50' : 'bg-white hover:bg-gray-50'
+        isSelected ? 'bg-teal-50' : 'bg-white hover:bg-gray-50'
       }`}
     >
       {/* Checkbox */}
       <div
         className={`w-5 h-5 border-2 flex items-center justify-center transition-colors ${
-          isSelected ? 'border-blue-700 bg-blue-700' : 'border-black bg-white'
+          isSelected ? 'border-[#0e7490] bg-[#0e7490]' : 'border-black bg-white'
         }`}
       >
         {isSelected && (

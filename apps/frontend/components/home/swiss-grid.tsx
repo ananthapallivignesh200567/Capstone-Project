@@ -8,14 +8,19 @@ import { useTranslations } from '@/lib/i18n';
 export const SwissGrid = ({ children }: { children: React.ReactNode }) => {
   const { t } = useTranslations();
 
+  const gridSvg = `<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'>
+  <path d='M0 0H40' stroke='#0e7490' stroke-opacity='0.15' stroke-width='1' fill='none'/>
+  <path d='M0 0V40' stroke='#0e7490' stroke-opacity='0.15' stroke-width='1' fill='none'/>
+  </svg>`;
+  const gridBackground = `url("data:image/svg+xml,${encodeURIComponent(gridSvg)}")`;
+
   return (
     // 1. Outer Wrapper: Fixed height with grid background
     <div
       className="h-screen w-full flex justify-center items-start py-12 px-4 md:px-8 overflow-hidden bg-[#F0F0E8]"
       style={{
-        backgroundImage:
-          'linear-gradient(rgba(29, 78, 216, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(29, 78, 216, 0.1) 1px, transparent 1px)',
-        backgroundSize: '40px 40px',
+        backgroundImage: gridBackground,
+        backgroundRepeat: 'repeat',
       }}
     >
       {/* 2. The Main Container: Sharp black borders, creating the "Canvas" */}
@@ -25,7 +30,7 @@ export const SwissGrid = ({ children }: { children: React.ReactNode }) => {
           <h1 className="font-serif text-5xl md:text-7xl text-black tracking-tight leading-[0.95] uppercase">
             {t('nav.dashboard')}
           </h1>
-          <p className="mt-6 text-sm font-mono text-blue-700 uppercase tracking-wide max-w-md font-bold">
+          <p className="mt-6 text-sm font-mono text-[#0e7490] uppercase tracking-wide max-w-md font-bold">
             {'// '}
             {t('dashboard.selectModule')}
           </p>
@@ -41,7 +46,7 @@ export const SwissGrid = ({ children }: { children: React.ReactNode }) => {
         </div>
 
         {/* Footer - stays above hovered cards */}
-        <div className="p-4 bg-[#F0F0E8] flex justify-between items-center font-mono text-xs text-blue-700 border-t border-black shrink-0 relative z-30">
+        <div className="p-4 bg-[#F0F0E8] flex justify-between items-center font-mono text-xs text-[#0e7490] border-t border-black shrink-0 relative z-30">
           <div className="flex items-center gap-2">
             
             

@@ -585,13 +585,18 @@ const ResumeBuilderContent = () => {
     doGenerateOutreach();
   };
 
+  const gridSvg = `<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'>
+  <path d='M0 0H40' stroke='#0e7490' stroke-opacity='0.15' stroke-width='1' fill='none'/>
+  <path d='M0 0V40' stroke='#0e7490' stroke-opacity='0.15' stroke-width='1' fill='none'/>
+  </svg>`;
+  const gridBackground = `url("data:image/svg+xml,${encodeURIComponent(gridSvg)}")`;
+
   return (
     <div
       className="h-screen w-full bg-[#F0F0E8] flex justify-center items-center p-4 md:p-8"
       style={{
-        backgroundImage:
-          'linear-gradient(rgba(29, 78, 216, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(29, 78, 216, 0.1) 1px, transparent 1px)',
-        backgroundSize: '40px 40px',
+        backgroundImage: gridBackground,
+        backgroundRepeat: 'repeat',
       }}
     >
       {/* Main Container */}
@@ -613,7 +618,7 @@ const ResumeBuilderContent = () => {
                 {t('nav.builder')}
               </h1>
               <div className="mt-3 flex items-center gap-3">
-                <p className="text-sm font-mono text-blue-700 uppercase tracking-wide font-bold">
+                <p className="text-sm font-mono text-[#0e7490] uppercase tracking-wide font-bold">
                   {'// '}
                   {resumeId ? t('builder.editMode') : t('builder.createAndPreview')}
                 </p>
@@ -733,7 +738,7 @@ const ResumeBuilderContent = () => {
           <div className="bg-[#F0F0E8] p-6 md:p-8 overflow-y-auto no-print">
             <div className="max-w-3xl mx-auto space-y-6">
               <div className="flex items-center gap-2 border-b-2 border-black pb-2">
-                <div className="w-3 h-3 bg-blue-700"></div>
+                <div className="w-3 h-3 bg-[#0e7490]"></div>
                 <h2 className="font-mono text-lg font-bold uppercase tracking-wider">
                   {activeTab === 'resume' && t('builder.leftPanel.editorPanel')}
                   {activeTab === 'cover-letter' && t('builder.leftPanel.coverLetterEditor')}
@@ -918,7 +923,7 @@ const ResumeBuilderContent = () => {
         </div>
 
         {/* Footer */}
-        <div className="p-4 bg-[#F0F0E8] flex justify-between items-center font-mono text-xs text-blue-700 border-t border-black no-print">
+        <div className="p-4 bg-[#F0F0E8] flex justify-between items-center font-mono text-xs text-[#0e7490] border-t border-black no-print">
           <span className="uppercase font-bold flex items-center gap-2">
             
             {t('builder.footer.moduleLabel')}

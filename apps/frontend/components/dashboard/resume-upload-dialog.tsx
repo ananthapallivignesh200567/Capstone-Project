@@ -207,7 +207,7 @@ export function ResumeUploadDialog({
           <div
             className={`
                             relative border-2 border-dashed p-8 text-center transition-all duration-200
-                            ${isDragging ? 'border-blue-700 bg-blue-50' : 'border-gray-400 hover:border-black hover:bg-white'}
+                            ${isDragging ? 'border-[#0e7490] bg-[#f0fdfa]' : 'border-gray-400 hover:border-black hover:bg-white'}
                             ${currentFile ? 'bg-white border-solid border-black' : ''}
                             ${!currentFile && !isRetryingProcessing ? 'cursor-pointer' : 'cursor-default'}
                             ${isRetryingProcessing ? 'opacity-70' : ''}
@@ -222,8 +222,8 @@ export function ResumeUploadDialog({
 
             {isUploadingGlobal ? (
               <div className="flex flex-col items-center py-4">
-                <Loader2Icon className="w-10 h-10 animate-spin text-blue-700 mb-4" />
-                <p className="font-mono text-sm font-bold uppercase text-blue-700">
+                <Loader2Icon className="w-10 h-10 animate-spin text-[#0e7490] mb-4" />
+                <p className="font-mono text-sm font-bold uppercase text-[#0e7490]">
                   {t('common.uploading')}
                 </p>
               </div>

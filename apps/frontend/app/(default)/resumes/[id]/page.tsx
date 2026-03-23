@@ -211,8 +211,8 @@ export default function ResumeViewerPage() {
   if (loading) {
     return (
       <div className="min-h-screen flex flex-col items-center justify-center bg-[#F0F0E8]">
-        <Loader2 className="w-10 h-10 animate-spin text-blue-700 mb-4" />
-        <p className="font-mono text-sm font-bold uppercase text-blue-700">
+        <Loader2 className="w-10 h-10 animate-spin text-[#0e7490] mb-4" />
+        <p className="font-mono text-sm font-bold uppercase text-[#0e7490]">
           {t('resumeViewer.loading')}
         </p>
       </div>
@@ -227,8 +227,8 @@ export default function ResumeViewerPage() {
       <div className="min-h-screen flex flex-col items-center justify-center bg-[#F0F0E8] p-4">
         <div
           className={`border p-6 text-center max-w-md shadow-[4px_4px_0px_0px_rgba(0,0,0,0.1)] ${
-            isProcessing
-              ? 'bg-blue-50 border-blue-200'
+              isProcessing
+              ? 'bg-teal-50 border-teal-200'
               : isFailed
                 ? 'bg-orange-50 border-orange-200'
                 : 'bg-red-50 border-red-200'
@@ -236,7 +236,7 @@ export default function ResumeViewerPage() {
         >
           <div className="flex justify-center mb-4">
             {isProcessing ? (
-              <Loader2 className="w-8 h-8 animate-spin text-blue-700" />
+              <Loader2 className="w-8 h-8 animate-spin text-[#0e7490]" />
             ) : isFailed ? (
               <AlertCircle className="w-8 h-8 text-orange-600" />
             ) : (
@@ -245,7 +245,7 @@ export default function ResumeViewerPage() {
           </div>
           <p
             className={`font-bold mb-4 ${
-              isProcessing ? 'text-blue-700' : isFailed ? 'text-orange-700' : 'text-red-700'
+              isProcessing ? 'text-[#0e7490]' : isFailed ? 'text-orange-700' : 'text-red-700'
             }`}
           >
             {error || t('resumeViewer.resumeNotFound')}
