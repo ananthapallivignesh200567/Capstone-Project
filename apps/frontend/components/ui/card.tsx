@@ -8,17 +8,17 @@ interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
 
 const Card = React.forwardRef<HTMLDivElement, CardProps>(
   ({ className, variant = 'default', noPadding = false, ...props }, ref) => {
-    const baseStyles = 'rounded-none flex flex-col relative overflow-hidden';
+    const baseStyles = 'rounded-lg flex flex-col relative overflow-hidden';
 
     const variants = {
-      default: 'bg-canvas',
+      default: 'bg-white border border-gray-200 shadow-sm',
       interactive: cn(
-        'bg-canvas border-2 border-transparent', // Initial state
-        'transition-all duration-200 ease-in-out',
+        'bg-white border border-gray-200',
+        'transition-shadow duration-200 ease-in-out',
         'cursor-pointer group',
-        'hover:z-20 hover:border-ink hover:shadow-sw-default hover:-translate-y-[2px] hover:-translate-x-[2px]'
+        'hover:shadow-md'
       ),
-      outline: 'bg-canvas border-2 border-ink',
+      outline: 'bg-white border border-gray-300 shadow-sm',
       ghost: 'bg-transparent border-none shadow-none',
     };
 
@@ -49,7 +49,7 @@ const CardTitle = React.forwardRef<HTMLHeadingElement, React.HTMLAttributes<HTML
   ({ className, ...props }, ref) => (
     <h3
       ref={ref}
-      className={cn('font-serif text-2xl font-semibold leading-none tracking-tight', className)}
+      className={cn('font-sans text-lg font-semibold leading-tight tracking-tight', className)}
       {...props}
     />
   )
@@ -60,7 +60,7 @@ const CardDescription = React.forwardRef<
   HTMLParagraphElement,
   React.HTMLAttributes<HTMLParagraphElement>
 >(({ className, ...props }, ref) => (
-  <p ref={ref} className={cn('text-sm text-gray-500 font-mono', className)} {...props} />
+  <p ref={ref} className={cn('text-sm text-gray-600', className)} {...props} />
 ));
 CardDescription.displayName = 'CardDescription';
 

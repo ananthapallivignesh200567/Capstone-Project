@@ -79,7 +79,7 @@
   --popover: #f0f0e8;
   --popover-foreground: #000000;
 
-  --primary: #0e7490; /* Cobalt/Teal */
+  --primary: #1d4ed8; /* Hyper Blue */
   --primary-foreground: #ffffff;
 
   --secondary: #e5e5e0; /* Panel Grey */
@@ -96,9 +96,9 @@
 
   --border: #000000;
   --input: #f0f0e8;
-  --ring: #0e7490;
+  --ring: #1d4ed8;
 
-  --chart-1: #0e7490;
+  --chart-1: #1d4ed8;
   --chart-2: #15803d;
   --chart-3: #f97316;
   --chart-4: #dc2626;
@@ -106,12 +106,12 @@
 
   --sidebar: #e5e5e0;
   --sidebar-foreground: #000000;
-  --sidebar-primary: #0e7490;
+  --sidebar-primary: #1d4ed8;
   --sidebar-primary-foreground: #ffffff;
   --sidebar-accent: #d8d8d2;
   --sidebar-accent-foreground: #000000;
   --sidebar-border: #000000;
-  --sidebar-ring: #0e7490;
+  --sidebar-ring: #1d4ed8;
 }
 
 .dark {
@@ -122,7 +122,7 @@
   --card-foreground: #ffffff;
   --popover: #2a2a2a;
   --popover-foreground: #ffffff;
-  --primary: #0e7490;
+  --primary: #3b82f6;
   --primary-foreground: #ffffff;
   --secondary: #2a2a2a;
   --secondary-foreground: #ffffff;
@@ -134,7 +134,7 @@
   --destructive-foreground: #ffffff;
   --border: #404040;
   --input: #2a2a2a;
-  --ring: #0e7490;
+  --ring: #3b82f6;
 }
 
 @layer base {
@@ -145,7 +145,7 @@
     @apply bg-background text-foreground;
   }
   button {
-    font-family: var(--font-mono);
+    font-family: var(--font-sans);
   }
 }
 
@@ -245,6 +245,112 @@
 .resume-body [data-no-break] {
   break-inside: avoid;
   page-break-inside: avoid;
+}
+
+/* =========================================================
+   Premium UI Overrides (de-Swiss)
+   - Scoped to screen only (does not affect PDF print)
+   - Softens sharp corners + harsh black borders
+   - Normalizes old canvas/panel backgrounds to a neutral UI
+   ========================================================= */
+@media screen {
+  /* Professional typography: avoid mono across the app shell (screen only) */
+  .font-mono {
+    font-family: var(--font-sans) !important;
+  }
+
+  /* Corners */
+  .rounded-none {
+    border-radius: 0.5rem !important;
+  }
+
+  /* Borders */
+  .border-black {
+    border-color: #e5e7eb !important;
+  }
+
+  /* Common Swiss background swatches */
+  .bg-\[\#F0F0E8\],
+  .bg-\[\#F5F5F0\],
+  .bg-\[\#E5E5E0\],
+  .bg-\[\#F6F5EE\] {
+    background-color: #ffffff !important;
+  }
+
+  /* Tailwind token mapped backgrounds */
+   .bg-canvas {
+    background-color: #f9fafb !important;
+  }
+
+  /* Swiss hard shadows -> soft premium shadows */
+  .shadow-sw-sm,
+  .shadow-sw-default,
+  .shadow-sw-card {
+    box-shadow: 0 2px 10px rgba(17, 24, 39, 0.06) !important;
+  }
+
+  /* Swiss arbitrary shadows -> soft premium shadows */
+  .shadow-\[4px_4px_0px_0px_rgba\(0\,0\,0\,0\.1\)\],
+  .shadow-\[4px_4px_0px_0px_\#000000\] {
+    --tw-shadow: 0 1px 3px rgba(17, 24, 39, 0.12) !important;
+    --tw-shadow-colored: 0 1px 3px rgba(17, 24, 39, 0.12) !important;
+    box-shadow: 0 1px 3px rgba(17, 24, 39, 0.12) !important;
+  }
+
+  .shadow-\[8px_8px_0px_0px_rgba\(0\,0\,0\,0\.1\)\],
+  .shadow-\[8px_8px_0px_0px_rgba\(0\,0\,0\,0\.2\)\],
+  .shadow-\[8px_8px_0px_0px_rgba\(0\,0\,0\,0\.9\)\],
+  .shadow-\[8px_8px_0px_0px_\#000000\] {
+    --tw-shadow: 0 4px 14px rgba(17, 24, 39, 0.10) !important;
+    --tw-shadow-colored: 0 4px 14px rgba(17, 24, 39, 0.10) !important;
+    box-shadow: 0 4px 14px rgba(17, 24, 39, 0.10) !important;
+  }
+
+  .shadow-\[12px_12px_0px_0px_rgba\(0\,0\,0\,0\.1\)\],
+  .shadow-\[12px_12px_0px_0px_rgba\(0\,0\,0\,0\.06\)\] {
+    --tw-shadow: 0 8px 24px rgba(17, 24, 39, 0.12) !important;
+    --tw-shadow-colored: 0 8px 24px rgba(17, 24, 39, 0.12) !important;
+    box-shadow: 0 8px 24px rgba(17, 24, 39, 0.12) !important;
+  }
+
+  /* Common 2px/6px brutal shadows -> soft premium shadows */
+  .shadow-\[2px_2px_0px_0px_rgba\(0\,0\,0\,0\.1\)\],
+  .shadow-\[2px_2px_0px_0px_rgba\(0\,0\,0\,1\)\],
+  .shadow-\[2px_2px_0px_0px_\#000000\],
+  .shadow-\[2px_2px_0px_0px_\#000\] {
+    --tw-shadow: 0 1px 6px rgba(17, 24, 39, 0.12) !important;
+    --tw-shadow-colored: 0 1px 6px rgba(17, 24, 39, 0.12) !important;
+    box-shadow: 0 1px 6px rgba(17, 24, 39, 0.12) !important;
+  }
+
+  .shadow-\[6px_6px_0px_0px_\#000000\] {
+    --tw-shadow: 0 10px 28px rgba(17, 24, 39, 0.12) !important;
+    --tw-shadow-colored: 0 10px 28px rgba(17, 24, 39, 0.12) !important;
+    box-shadow: 0 10px 28px rgba(17, 24, 39, 0.12) !important;
+  }
+
+  /* Accent normalization (old teal -> premium blue) */
+  .text-\[\#0e7490\] {
+    color: #1d4ed8 !important;
+  }
+  .bg-\[\#0e7490\] {
+    background-color: #1d4ed8 !important;
+  }
+  .border-\[\#0e7490\] {
+    border-color: #1d4ed8 !important;
+  }
+  .border-l-\[\#0e7490\] {
+    border-left-color: #1d4ed8 !important;
+  }
+  .bg-\[\#f0fdfa\] {
+    background-color: #dbeafe !important;
+  }
+  .bg-\[\#99f6e4\] {
+    background-color: #93c5fd !important;
+  }
+  .ring-\[\#0e7490\] {
+    --tw-ring-color: #1d4ed8 !important;
+  }
 }
 
 /* Print-specific overrides for resume templates */

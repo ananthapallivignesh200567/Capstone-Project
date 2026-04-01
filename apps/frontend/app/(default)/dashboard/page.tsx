@@ -242,7 +242,7 @@ export default function DashboardPage() {
         return {
           text: t('dashboard.status.processing'),
           icon: <Loader2 className="w-3 h-3 animate-spin" />,
-          color: 'text-[#0e7490]',
+          color: 'text-blue-700',
         };
       case 'ready':
         return { text: t('dashboard.status.ready'), icon: null, color: 'text-green-700' };
@@ -267,7 +267,7 @@ export default function DashboardPage() {
 
   // Muted palette that complements the #F0F0E8 canvas
   const cardPalette = [
-    { bg: '#0e7490', fg: '#FFFFFF' }, // Cobalt/Teal
+    { bg: '#1d4ed8', fg: '#FFFFFF' }, // Blue
     { bg: '#15803D', fg: '#FFFFFF' }, // Signal Green
     { bg: '#000000', fg: '#FFFFFF' }, // Ink
     { bg: '#92400E', fg: '#FFFFFF' }, // Warm Brown
@@ -386,7 +386,7 @@ export default function DashboardPage() {
           >
             <div className="flex-1 flex flex-col h-full">
               <div className="flex justify-between items-start mb-6">
-                <div className="w-16 h-16 border-2 border-black bg-[#0e7490] text-white flex items-center justify-center">
+                <div className="w-16 h-16 border-2 border-black bg-[#1d4ed8] text-white flex items-center justify-center">
                   <span className="font-mono font-bold text-lg">M</span>
                 </div>
                 <div className="flex gap-1">
@@ -395,7 +395,7 @@ export default function DashboardPage() {
                       <Button
                         variant="ghost"
                         size="icon"
-                        className="h-8 w-8 hover:bg-[#ccfbf1] hover:text-[#0e7490] z-10 rounded-none relative"
+                        className="h-8 w-8 hover:bg-blue-100 hover:text-blue-700 z-10 rounded-md relative"
                         onClick={handleRetryProcessing}
                         disabled={isRetrying}
                         title={t('dashboard.retryProcessing')}
@@ -495,7 +495,7 @@ export default function DashboardPage() {
             <Button
               onClick={() => router.push('/tailor')}
               disabled={!isTailorEnabled}
-              className="w-20 h-20 bg-[#0e7490] text-white border-2 border-black shadow-sw-default hover:bg-[#0b5e6e] hover:translate-y-[2px] hover:translate-x-[2px] hover:shadow-none transition-all rounded-none"
+              className="w-20 h-20 bg-[#1d4ed8] text-white border-2 border-black shadow-sm hover:bg-blue-800 hover:transition-all rounded-md"
             >
               <Plus className="w-8 h-8" />
             </Button>

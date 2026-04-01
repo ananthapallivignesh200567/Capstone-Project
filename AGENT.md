@@ -6,12 +6,22 @@
 
 ## What This Repo Is
 
+
+
 Resume Matcher is an AI-powered application for tailoring resumes to job descriptions:
 
 - **Backend**: FastAPI + Python 3.11+ with multi-provider LLM support (LiteLLM)
+
 - **Frontend**: Next.js 15 + React 19 with Swiss International Style design
+
 - **Database**: TinyDB (JSON file storage)
+
 - **PDF Generation**: Headless Chromium via Playwright
+
+Resume optimizer is integrated seamlessly with job description inputs and LLM APIs to ensure that the necessary skills and experiences are correctly highlighted on the resumes. By using AI enrichment technology, each resume holds targeted improvements that provide quick adaptation to specific roles. This cutting-edge feature supports efficient content generation and improved match rates for both job seekers and recruiters, and hence, it is an added value for professionals looking to streamline their application processes.
+
+The application supports drag-and-drop section reordering, multiple resume templates (single-column, two-column, modern variants), cover letter generation, and keyword highlighting for JD matching. With local-first persistence and multi-language support (EN/ES/JA/PT-BR/ZH), users can work offline after initial setup, making it ideal for rapid iterations on job applications.
+
 
 ---
 

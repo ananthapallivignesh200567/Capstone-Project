@@ -136,8 +136,8 @@ const DialogContent: React.FC<DialogContentProps> = ({ children, className }) =>
         <div
           className={cn(
             'relative w-full max-w-lg',
-            'border border-black bg-[#F0F0E8] shadow-[8px_8px_0px_0px_rgba(0,0,0,0.2)]',
-            'rounded-none',
+            'border border-gray-200 bg-white shadow-lg',
+            'rounded-lg',
             'animate-in fade-in-0 zoom-in-95 duration-200',
             className
           )}
@@ -146,7 +146,7 @@ const DialogContent: React.FC<DialogContentProps> = ({ children, className }) =>
           {children}
           <button
             onClick={() => onOpenChange(false)}
-            className="absolute right-4 top-4 opacity-70 transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-[#0e7490] focus:ring-offset-2"
+            className="absolute right-4 top-4 opacity-70 transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-blue-700 focus:ring-offset-2"
           >
             <X className="h-5 w-5" />
             <span className="sr-only">{t('common.close')}</span>

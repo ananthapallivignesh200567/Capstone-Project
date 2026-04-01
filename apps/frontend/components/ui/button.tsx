@@ -50,100 +50,94 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     const baseStyles = cn(
       // Layout & Typography
       'inline-flex items-center justify-center gap-2',
-      'whitespace-nowrap text-sm font-medium font-mono uppercase tracking-wide',
+      'whitespace-nowrap text-sm font-medium font-sans normal-case tracking-normal',
       // Transitions
-      'transition-all duration-150 ease-out',
-      // Focus state - sharp blue ring (not soft glow)
-      'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0e7490] focus-visible:ring-offset-2',
+      'transition-colors duration-150 ease-out',
+      // Focus state
+      'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-700 focus-visible:ring-offset-2',
       // Disabled state
       'disabled:pointer-events-none disabled:opacity-50',
       // SVG icon sizing
       "[&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 [&_svg]:shrink-0",
-      // Swiss Design: NO rounded corners
-      'rounded-none'
+      // Normal/Bootstrap style corners
+      'rounded-md'
     );
 
     // Variant styles - each has distinct purpose and color
     const variants = {
-      // PRIMARY - Cobalt/Teal (#0E7490)
+      // PRIMARY - Hyper Blue (#1D4ED8)
       // Use for: Save, Submit, Create, Primary CTA
       default: cn(
-        'bg-[#0e7490] text-white',
-        'border border-black',
-        'shadow-[2px_2px_0px_0px_#000000]',
-        'hover:bg-[#0b5e6e]',
-        'hover:translate-y-[1px] hover:translate-x-[1px] hover:shadow-none',
-        'active:translate-y-[2px] active:translate-x-[2px]'
+        'bg-blue-700 text-white',
+        'border border-gray-200',
+        'shadow-sm',
+        'hover:bg-blue-800',
+        'active:bg-blue-900'
       ),
 
       // DESTRUCTIVE - Alert Red (#DC2626 / red-600)
       // Use for: Delete, Remove, Destroy, Dangerous actions
       destructive: cn(
         'bg-red-600 text-white',
-        'border border-black',
-        'shadow-[2px_2px_0px_0px_#000000]',
+        'border border-gray-200',
+        'shadow-sm',
         'hover:bg-red-700',
-        'hover:translate-y-[1px] hover:translate-x-[1px] hover:shadow-none',
-        'active:translate-y-[2px] active:translate-x-[2px]'
+        'active:bg-red-800'
       ),
 
       // SUCCESS - Signal Green (#15803D / green-700)
       // Use for: Download, Confirm, Complete, Positive actions
       success: cn(
         'bg-green-700 text-white',
-        'border border-black',
-        'shadow-[2px_2px_0px_0px_#000000]',
+        'border border-gray-200',
+        'shadow-sm',
         'hover:bg-green-800',
-        'hover:translate-y-[1px] hover:translate-x-[1px] hover:shadow-none',
-        'active:translate-y-[2px] active:translate-x-[2px]'
+        'active:bg-green-900'
       ),
 
       // WARNING - Alert Orange (#F97316 / orange-500)
       // Use for: Reset, Clear, Undo, Caution actions
       warning: cn(
         'bg-orange-500 text-white',
-        'border border-black',
-        'shadow-[2px_2px_0px_0px_#000000]',
+        'border border-gray-200',
+        'shadow-sm',
         'hover:bg-orange-600',
-        'hover:translate-y-[1px] hover:translate-x-[1px] hover:shadow-none',
-        'active:translate-y-[2px] active:translate-x-[2px]'
+        'active:bg-orange-700'
       ),
 
       // OUTLINE - Canvas background with black border
       // Use for: Cancel, Back, Secondary actions, Navigation
       outline: cn(
-        'bg-[#F0F0E8] text-black',
-        'border border-black',
-        'shadow-[2px_2px_0px_0px_#000000]',
-        'hover:bg-[#E5E5E0]',
-        'hover:translate-y-[1px] hover:translate-x-[1px] hover:shadow-none',
-        'active:translate-y-[2px] active:translate-x-[2px]'
+        'bg-white text-blue-700',
+        'border border-blue-700',
+        'shadow-sm',
+        'hover:bg-blue-50',
+        'active:bg-blue-100'
       ),
 
       // SECONDARY - Panel Grey (#E5E5E0)
       // Use for: Less prominent actions, Toolbar buttons
       secondary: cn(
-        'bg-[#E5E5E0] text-black',
-        'border border-black',
-        'shadow-[2px_2px_0px_0px_#000000]',
-        'hover:bg-[#D8D8D2]',
-        'hover:translate-y-[1px] hover:translate-x-[1px] hover:shadow-none',
-        'active:translate-y-[2px] active:translate-x-[2px]'
+        'bg-gray-200 text-black',
+        'border border-gray-300',
+        'shadow-sm',
+        'hover:bg-gray-300',
+        'active:bg-gray-400'
       ),
 
       // GHOST - No background, minimal styling
       // Use for: Icon buttons, Subtle navigation, Toolbars
       ghost: cn(
-        'bg-transparent text-black',
+        'bg-transparent text-blue-700',
         'border-none shadow-none',
-        'hover:bg-gray-100',
-        'active:bg-gray-200'
+        'hover:bg-blue-50',
+        'active:bg-blue-100'
       ),
 
       // LINK - Text only with underline
       // Use for: Inline links, Text navigation
       link: cn(
-        'bg-transparent text-[#0e7490]',
+        'bg-transparent text-blue-700',
         'border-none shadow-none',
         'underline-offset-4 hover:underline',
         'p-0 h-auto'

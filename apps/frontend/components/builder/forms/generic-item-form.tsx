@@ -133,7 +133,7 @@ export const GenericItemForm: React.FC<GenericItemFormProps> = ({
           variant="outline"
           size="sm"
           onClick={handleAdd}
-          className="rounded-none border-black hover:bg-black hover:text-white transition-colors"
+          className="rounded-md border-gray-300 hover:bg-gray-100 hover:text-black transition-colors"
         >
           <Plus className="w-4 h-4 mr-2" /> {finalAddLabel}
         </Button>
@@ -141,7 +141,7 @@ export const GenericItemForm: React.FC<GenericItemFormProps> = ({
 
       <div className="space-y-8">
         {items.map((item) => (
-          <div key={item.id} className="p-6 border border-black bg-gray-50 relative group">
+          <div key={item.id} className="p-6 border border-gray-200 bg-white rounded-xl shadow-sm relative group">
             <Button
               variant="ghost"
               size="icon"
@@ -160,7 +160,7 @@ export const GenericItemForm: React.FC<GenericItemFormProps> = ({
                   value={item.title || ''}
                   onChange={(e) => handleChange(item.id, 'title', e.target.value)}
                   placeholder={finalTitlePlaceholder}
-                  className="rounded-none border-black bg-white"
+                  className="rounded-md border-gray-300 bg-white"
                 />
               </div>
               {showSubtitle && (
@@ -172,7 +172,7 @@ export const GenericItemForm: React.FC<GenericItemFormProps> = ({
                     value={item.subtitle || ''}
                     onChange={(e) => handleChange(item.id, 'subtitle', e.target.value)}
                     placeholder={finalSubtitlePlaceholder}
-                    className="rounded-none border-black bg-white"
+                    className="rounded-md border-gray-300 bg-white"
                   />
                 </div>
               )}
@@ -185,7 +185,7 @@ export const GenericItemForm: React.FC<GenericItemFormProps> = ({
                     value={item.location || ''}
                     onChange={(e) => handleChange(item.id, 'location', e.target.value)}
                     placeholder={finalLocationPlaceholder}
-                    className="rounded-none border-black bg-white"
+                    className="rounded-md border-gray-300 bg-white"
                   />
                 </div>
               )}
@@ -198,7 +198,7 @@ export const GenericItemForm: React.FC<GenericItemFormProps> = ({
                     value={item.years || ''}
                     onChange={(e) => handleChange(item.id, 'years', e.target.value)}
                     placeholder={finalYearsPlaceholder}
-                    className="rounded-none border-black bg-white"
+                    className="rounded-md border-gray-300 bg-white"
                   />
                 </div>
               )}
@@ -213,7 +213,7 @@ export const GenericItemForm: React.FC<GenericItemFormProps> = ({
                   variant="ghost"
                   size="sm"
                   onClick={() => handleAddDescription(item.id)}
-                  className="h-6 text-xs text-[#0e7490] hover:text-[#0b5e6e] hover:bg-[#f0fdfa]"
+                  className="h-6 text-xs text-blue-700 hover:text-blue-800 hover:bg-blue-50"
                 >
                   <Plus className="w-3 h-3 mr-1" /> {t('builder.genericItemForm.actions.addPoint')}
                 </Button>
@@ -243,7 +243,7 @@ export const GenericItemForm: React.FC<GenericItemFormProps> = ({
         ))}
 
         {items.length === 0 && (
-          <div className="text-center py-12 bg-gray-50 border border-dashed border-black">
+          <div className="text-center py-12 bg-white border border-dashed border-gray-300 rounded-xl">
             <p className="font-mono text-sm text-gray-500 mb-4">
               {t('builder.genericItemForm.noEntries', { label: finalItemLabel })}
             </p>
@@ -251,7 +251,7 @@ export const GenericItemForm: React.FC<GenericItemFormProps> = ({
               variant="outline"
               size="sm"
               onClick={handleAdd}
-              className="rounded-none border-black"
+              className="rounded-md border-gray-300"
             >
               <Plus className="w-4 h-4 mr-2" />{' '}
               {t('builder.genericItemForm.addFirstItem', { label: finalItemLabel })}

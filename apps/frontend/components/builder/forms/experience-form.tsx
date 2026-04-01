@@ -91,7 +91,7 @@ export const ExperienceForm: React.FC<ExperienceFormProps> = ({ data, onChange }
           variant="outline"
           size="sm"
           onClick={handleAdd}
-          className="rounded-none border-black hover:bg-black hover:text-white transition-colors"
+          className="rounded-md border-gray-300 hover:bg-gray-100 hover:text-black transition-colors"
         >
           <Plus className="w-4 h-4 mr-2" /> {t('builder.forms.experience.addJob')}
         </Button>
@@ -118,7 +118,7 @@ export const ExperienceForm: React.FC<ExperienceFormProps> = ({ data, onChange }
                   value={item.title || ''}
                   onChange={(e) => handleChange(item.id, 'title', e.target.value)}
                   placeholder={t('builder.forms.experience.placeholders.jobTitle')}
-                  className="rounded-none border-black bg-white"
+                  className="rounded-md border-gray-300 bg-white"
                 />
               </div>
               <div className="space-y-2">
@@ -129,7 +129,7 @@ export const ExperienceForm: React.FC<ExperienceFormProps> = ({ data, onChange }
                   value={item.company || ''}
                   onChange={(e) => handleChange(item.id, 'company', e.target.value)}
                   placeholder={t('builder.forms.experience.placeholders.company')}
-                  className="rounded-none border-black bg-white"
+                  className="rounded-md border-gray-300 bg-white"
                 />
               </div>
               <div className="space-y-2">
@@ -140,7 +140,7 @@ export const ExperienceForm: React.FC<ExperienceFormProps> = ({ data, onChange }
                   value={item.location || ''}
                   onChange={(e) => handleChange(item.id, 'location', e.target.value)}
                   placeholder={t('builder.forms.experience.placeholders.location')}
-                  className="rounded-none border-black bg-white"
+                  className="rounded-md border-gray-300 bg-white"
                 />
               </div>
               <div className="space-y-2">
@@ -151,7 +151,7 @@ export const ExperienceForm: React.FC<ExperienceFormProps> = ({ data, onChange }
                   value={item.years || ''}
                   onChange={(e) => handleChange(item.id, 'years', e.target.value)}
                   placeholder={t('builder.forms.experience.placeholders.years')}
-                  className="rounded-none border-black bg-white"
+                  className="rounded-md border-gray-300 bg-white"
                 />
               </div>
             </div>
@@ -165,7 +165,7 @@ export const ExperienceForm: React.FC<ExperienceFormProps> = ({ data, onChange }
                   variant="ghost"
                   size="sm"
                   onClick={() => handleAddDescription(item.id)}
-                  className="h-6 text-xs text-[#0e7490] hover:text-[#0b5e6e] hover:bg-[#f0fdfa]"
+                  className="h-6 text-xs text-blue-700 hover:text-blue-800 hover:bg-blue-50"
                 >
                   <Plus className="w-3 h-3 mr-1" /> {t('builder.genericItemForm.actions.addPoint')}
                 </Button>
@@ -203,7 +203,7 @@ export const ExperienceForm: React.FC<ExperienceFormProps> = ({ data, onChange }
               variant="outline"
               size="sm"
               onClick={handleAdd}
-              className="rounded-none border-black"
+              className="rounded-md border-gray-300"
             >
               <Plus className="w-4 h-4 mr-2" /> {t('builder.forms.experience.addFirstJob')}
             </Button>

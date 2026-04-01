@@ -23,12 +23,6 @@ import { ConfirmDialog } from '@/components/ui/confirm-dialog';
 
 export default function TailorPage() {
   const { t } = useTranslations();
-
-  const gridSvg = `<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'>
-  <path d='M0 0H40' stroke='#0e7490' stroke-opacity='0.15' stroke-width='1' fill='none'/>
-  <path d='M0 0V40' stroke='#0e7490' stroke-opacity='0.15' stroke-width='1' fill='none'/>
-  </svg>`;
-  const gridBackground = `url("data:image/svg+xml,${encodeURIComponent(gridSvg)}")`;
   const [jobDescription, setJobDescription] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -303,11 +297,7 @@ export default function TailorPage() {
 
   return (
     <div
-      className="min-h-screen w-full bg-[#F6F5EE] flex flex-col items-center justify-center p-4 md:p-8 font-sans"
-      style={{
-        backgroundImage: gridBackground,
-        backgroundRepeat: 'repeat',
-      }}
+      className="min-h-screen w-full bg-gray-50 flex flex-col items-center justify-center p-4 md:p-8 font-sans"
     >
       <div className="w-full max-w-4xl bg-white border border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,0.1)] p-8 md:p-12 lg:p-14 relative">
         {/* Back Button */}
@@ -320,7 +310,7 @@ export default function TailorPage() {
           <h1 className="font-serif text-4xl font-bold uppercase tracking-tight mb-2">
             {t('tailor.heroTitle')}
           </h1>
-          <p className="font-mono text-sm text-[#0e7490] font-bold uppercase">
+          <p className="font-mono text-sm text-blue-700 font-bold">
             {'// '}
             {t('tailor.pasteJobDescriptionBelow')}
           </p>
@@ -392,7 +382,7 @@ export default function TailorPage() {
           <div className="relative">
             <Textarea
               placeholder={t('tailor.jobDescriptionPlaceholder')}
-              className="min-h-[300px] font-mono text-sm bg-gray-50 border-2 border-black focus:ring-0 focus:border-[#0e7490] resize-none p-4 rounded-none shadow-inner"
+              className="min-h-[300px] font-mono text-sm bg-gray-50 border-2 border-black focus:ring-0 focus:border-blue-700 resize-none p-4 rounded-md shadow-inner"
               value={jobDescription}
               onChange={(e) => setJobDescription(e.target.value)}
               onKeyDown={handleTextareaKeyDown}

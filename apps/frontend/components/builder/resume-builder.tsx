@@ -586,23 +586,19 @@ const ResumeBuilderContent = () => {
   };
 
   const gridSvg = `<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'>
-  <path d='M0 0H40' stroke='#0e7490' stroke-opacity='0.15' stroke-width='1' fill='none'/>
-  <path d='M0 0V40' stroke='#0e7490' stroke-opacity='0.15' stroke-width='1' fill='none'/>
+  <path d='M0 0H40' stroke='#1d4ed8' stroke-opacity='0.15' stroke-width='1' fill='none'/>
+  <path d='M0 0V40' stroke='#1d4ed8' stroke-opacity='0.15' stroke-width='1' fill='none'/>
   </svg>`;
   const gridBackground = `url("data:image/svg+xml,${encodeURIComponent(gridSvg)}")`;
 
   return (
     <div
-      className="h-screen w-full bg-[#F0F0E8] flex justify-center items-center p-4 md:p-8"
-      style={{
-        backgroundImage: gridBackground,
-        backgroundRepeat: 'repeat',
-      }}
+      className="min-h-screen w-full bg-gray-50 flex justify-center items-center p-4 md:p-8"
     >
       {/* Main Container */}
-      <div className="w-full h-full max-w-[90%] md:max-w-[95%] xl:max-w-[1800px] border border-black bg-[#F0F0E8] shadow-[8px_8px_0px_0px_rgba(0,0,0,0.1)] flex flex-col">
+      <div className="w-full h-full max-w-[90%] md:max-w-[95%] xl:max-w-[1800px] border border-gray-200 bg-white shadow-lg rounded-xl flex flex-col">
         {/* Header Section */}
-        <div className="border-b border-black p-6 md:p-8 bg-[#F0F0E8] no-print">
+        <div className="border-b border-gray-200 p-6 md:p-8 bg-white rounded-t-xl no-print">
           {/* Top Row: Back button and Actions */}
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-6">
             <div>
@@ -618,7 +614,7 @@ const ResumeBuilderContent = () => {
                 {t('nav.builder')}
               </h1>
               <div className="mt-3 flex items-center gap-3">
-                <p className="text-sm font-mono text-[#0e7490] uppercase tracking-wide font-bold">
+                <p className="text-sm font-semibold text-blue-700 uppercase tracking-wide">
                   {'// '}
                   {resumeId ? t('builder.editMode') : t('builder.createAndPreview')}
                 </p>
@@ -733,13 +729,13 @@ const ResumeBuilderContent = () => {
         </div>
 
         {/* Content Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 bg-black gap-[1px] flex-1 min-h-0">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 flex-1 min-h-0 p-4 bg-gray-50">
           {/* Left Panel: Editor */}
-          <div className="bg-[#F0F0E8] p-6 md:p-8 overflow-y-auto no-print">
+          <div className="bg-white border border-gray-200 p-6 md:p-8 overflow-y-auto no-print rounded-xl shadow-sm">
             <div className="max-w-3xl mx-auto space-y-6">
-              <div className="flex items-center gap-2 border-b-2 border-black pb-2">
-                <div className="w-3 h-3 bg-[#0e7490]"></div>
-                <h2 className="font-mono text-lg font-bold uppercase tracking-wider">
+              <div className="flex items-center gap-2 border-b border-gray-200 pb-2">
+                <div className="w-3 h-3 bg-blue-600 rounded-full"></div>
+                <h2 className="font-semibold text-lg uppercase tracking-wider">
                   {activeTab === 'resume' && t('builder.leftPanel.editorPanel')}
                   {activeTab === 'cover-letter' && t('builder.leftPanel.coverLetterEditor')}
                   {activeTab === 'outreach' && t('builder.leftPanel.outreachEditor')}
@@ -923,7 +919,7 @@ const ResumeBuilderContent = () => {
         </div>
 
         {/* Footer */}
-        <div className="p-4 bg-[#F0F0E8] flex justify-between items-center font-mono text-xs text-[#0e7490] border-t border-black no-print">
+        <div className="p-4 bg-white flex justify-between items-center font-semibold text-sm text-blue-700 border-t border-gray-200 no-print rounded-b-xl">
           <span className="uppercase font-bold flex items-center gap-2">
             
             {t('builder.footer.moduleLabel')}

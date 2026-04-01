@@ -48,7 +48,7 @@ export function OutreachEditor({
   return (
     <div className={cn('flex flex-col h-full', className)}>
       {/* Header */}
-      <div className="flex items-center justify-between p-4 border-b-2 border-black bg-[#F5F5F0]">
+      <div className="flex items-center justify-between p-4 border-b border-gray-200 bg-white rounded-t-xl">
         <div className="flex items-center gap-2">
           <Mail className="w-4 h-4" />
           <h2 className="font-mono text-sm font-bold uppercase tracking-wider">
@@ -88,16 +88,16 @@ export function OutreachEditor({
           className={cn(
             'w-full h-full min-h-[250px] p-4',
             'font-mono text-sm leading-relaxed',
-            'border-2 border-black bg-white',
+            'border border-gray-300 bg-white rounded-md shadow-sm',
             'resize-none',
-            'focus:outline-none focus:ring-2 focus:ring-[#0e7490] focus:ring-offset-2',
+            'focus:outline-none focus:ring-2 focus:ring-blue-700 focus:ring-offset-2',
             'placeholder:text-gray-400'
           )}
         />
       </div>
 
       {/* Footer Tips */}
-      <div className="p-4 border-t border-gray-200 bg-[#F5F5F0]">
+      <div className="p-4 border-t border-gray-200 bg-white rounded-b-xl">
         <p className="font-mono text-xs text-gray-500">{t('outreach.editor.tip')}</p>
       </div>
     </div>

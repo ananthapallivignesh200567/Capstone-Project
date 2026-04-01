@@ -44,7 +44,7 @@ export const TemplateSelector: React.FC<TemplateSelectorProps> = ({ value, onCha
           onClick={() => onChange(template.id)}
           className={`group flex flex-col items-center p-3 border-2 transition-all ${
             value === template.id
-              ? 'border-[#0e7490] bg-[#f0fdfa] shadow-[3px_3px_0px_0px_#0e7490]'
+              ? 'border-[#1d4ed8] bg-[#DBEAFE] shadow-[3px_3px_0px_0px_#1d4ed8]'
               : 'border-black bg-white hover:bg-gray-50 hover:shadow-[2px_2px_0px_0px_#000]'
           }`}
           title={templateLabels[template.id].description}
@@ -57,7 +57,7 @@ export const TemplateSelector: React.FC<TemplateSelectorProps> = ({ value, onCha
           {/* Template Name */}
           <span
             className={`font-mono text-[10px] uppercase tracking-wider font-bold ${
-              value === template.id ? 'text-[#0e7490]' : 'text-gray-700'
+              value === template.id ? 'text-[#1d4ed8]' : 'text-gray-700'
             }`}
           >
             {templateLabels[template.id].name}
@@ -80,9 +80,9 @@ interface TemplateThumbnailProps {
 }
 
 export const TemplateThumbnail: React.FC<TemplateThumbnailProps> = ({ type, isActive }) => {
-  const lineColor = isActive ? 'bg-[#0e7490]' : 'bg-gray-400';
-  const borderColor = isActive ? 'border-[#0e7490]' : 'border-gray-400';
-  const accentColor = isActive ? 'bg-[#0e7490]' : 'bg-[#99f6e4]';
+  const lineColor = isActive ? 'bg-[#1d4ed8]' : 'bg-gray-400';
+  const borderColor = isActive ? 'border-[#1d4ed8]' : 'border-gray-400';
+  const accentColor = isActive ? 'bg-[#1d4ed8]' : 'bg-[#DBEAFE]';
 
   if (type === 'swiss-single') {
     // Single column thumbnail
@@ -151,7 +151,7 @@ export const TemplateThumbnail: React.FC<TemplateThumbnailProps> = ({ type, isAc
           {/* Right column (narrower) - with accent border and headers */}
           <div
             className={`w-1/3 border-l-2 ${
-              isActive ? 'border-l-[#0e7490]' : 'border-l-[#99f6e4]'
+              isActive ? 'border-l-[#1d4ed8]' : 'border-l-[#DBEAFE]'
             } pl-1 space-y-0.5`}
           >
             <div className={`h-0.5 ${accentColor} w-full`}></div>

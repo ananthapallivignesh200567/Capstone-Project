@@ -93,7 +93,7 @@ export class ErrorBoundary extends Component<Props, State> {
               </Button>
               <Button
                 onClick={this.handleReload}
-                className="flex-1 bg-[#0e7490] hover:bg-[#0b5e6e] text-white rounded-none border border-black shadow-[2px_2px_0px_0px_#000000] hover:translate-y-[1px] hover:translate-x-[1px] hover:shadow-none transition-all"
+                className="flex-1 bg-blue-700 hover:bg-blue-800 text-white rounded-md border border-gray-200 shadow-sm transition-colors"
               >
                 <RefreshCw className="w-4 h-4 mr-2" />
                 {strings.reloadPage}

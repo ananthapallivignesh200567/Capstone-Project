@@ -64,7 +64,7 @@ export const RichTextToolbar: React.FC<RichTextToolbarProps> = ({ editor, onLink
           title={`${tool.label} (${tool.shortcut})`}
           className={cn(
             'h-7 w-7 rounded-none',
-            tool.isActive && 'bg-[#0e7490] text-white hover:bg-[#0b5e6e] hover:text-white'
+            tool.isActive && 'bg-blue-700 text-white hover:bg-blue-800 hover:text-white'
           )}
         >
           <tool.icon className="w-4 h-4" />

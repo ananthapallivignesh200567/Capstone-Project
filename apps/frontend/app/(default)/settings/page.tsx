@@ -500,8 +500,8 @@ export default function SettingsPage() {
   const requiresApiKey = providerInfo.requiresKey ?? true;
 
   const gridSvg = `<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'>
-  <path d='M0 0H40' stroke='#0e7490' stroke-opacity='0.15' stroke-width='1' fill='none'/>
-  <path d='M0 0V40' stroke='#0e7490' stroke-opacity='0.15' stroke-width='1' fill='none'/>
+  <path d='M0 0H40' stroke='#1d4ed8' stroke-opacity='0.15' stroke-width='1' fill='none'/>
+  <path d='M0 0V40' stroke='#1d4ed8' stroke-opacity='0.15' stroke-width='1' fill='none'/>
   </svg>`;
   const gridBackground = `url("data:image/svg+xml,${encodeURIComponent(gridSvg)}")`;
 

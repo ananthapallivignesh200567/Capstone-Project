@@ -97,8 +97,8 @@ export const ConfirmDialog: React.FC<ConfirmDialogProps> = ({
     },
     default: {
       icon: (
-        <div className="w-12 h-12 border-2 border-[#0e7490] bg-[#f0fdfa] flex items-center justify-center">
-          <span className="text-[#0e7490] text-2xl font-bold">?</span>
+        <div className="w-12 h-12 border-2 border-blue-700 bg-blue-50 flex items-center justify-center">
+          <span className="text-blue-700 text-2xl font-bold">?</span>
         </div>
       ),
       buttonVariant: 'default' as const,
